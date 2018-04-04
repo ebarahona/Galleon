@@ -43,7 +43,7 @@
     "pm2": "^2.1.6",
     "portscanner": "^2.1.1",
     "request": "^2.79.0",
-    "sails-disk": "^0.10.10",
+    "sails-disk": "^1.0.0",
     "sails-memory": "^0.10.7",
     "sails-mongo": "^0.12.1",
     "sails-mysql": "^0.11.5",

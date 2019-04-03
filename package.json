@@ -31,10 +31,10 @@
     "herb": "^2.2.6",
     "inquirer": "^3.0.1",
     "istanbul": "^0.4.5",
-    "jsonwebtoken": "^7.2.1",
-    "lodash": "^3.10.1",
+    "jsonwebtoken": "^8.0.0",
+    "lodash": "^4.17.11",
     "mailparser": "^0.6.1",
-    "mocha": "^3.2.0",
+    "mocha": "^5.0.3",
     "moment": "^2.17.1",
     "morgan": "^1.7.0",
     "multer": "^1.2.0",
@@ -43,12 +43,12 @@
     "pm2": "^2.1.6",
     "portscanner": "^2.1.1",
     "request": "^2.79.0",
-    "sails-disk": "^0.10.10",
+    "sails-disk": "^1.0.0",
     "sails-memory": "^0.10.7",
-    "sails-mongo": "^0.12.1",
-    "sails-mysql": "^0.11.5",
-    "sails-postgresql": "^0.11.4",
-    "sails-redis": "^0.10.7",
+    "sails-mongo": "^1.0.0",
+    "sails-mysql": "^1.0.0",
+    "sails-postgresql": "^1.0.0",
+    "sails-redis": "^1.0.0",
     "sails-sqlserver": "^0.10.8",
     "serve-favicon": "^2.3.2",
     "shelljs": "^0.7.5",
@@ -56,9 +56,10 @@
     "smtp-connection": "^2.12.2",
     "smtp-server": "^1.16.1",
     "spamc-stream": "^1.0.2",
-    "validator": "^6.2.0",
-    "waterline": "^0.11.6",
-    "yargs": "^6.6.0"
+    "validator": "^9.4.1",
+    "waterline": "^0.13.1",
+    "yargs": "^6.6.0",
+    "snyk": "^1.147.0"
   },
   "repository": {
     "type": "git",
@@ -67,7 +68,9 @@
   "scripts": {
     "start": "node ./seascape/server.js",
     "test": "node ./node_modules/mocha/bin/mocha test.js",
-    "coverage": "mocha test.js -r blanket -R html-cov > coverage.html"
+    "coverage": "mocha test.js -r blanket -R html-cov > coverage.html",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "config": {
     "blanket": {
@@ -84,7 +87,7 @@
     "blanket": "^1.1.9",
     "chai": "^3.3.0",
     "istanbul": "^0.4.0",
-    "mocha": "^2.3.3",
+    "mocha": "^5.0.3",
     "request": "^2.65.0",
     "smtp-connection": "^1.3.1"
   },
@@ -94,5 +97,6 @@
   "homepage": "https://github.com/schahriar/Galleon#readme",
   "directories": {
     "test": "tests"
-  }
+  },
+  "snyk": true
 }

@@ -58,7 +58,8 @@
     "spamc-stream": "^1.0.2",
     "validator": "^6.2.0",
     "waterline": "^0.11.6",
-    "yargs": "^6.6.0"
+    "yargs": "^6.6.0",
+    "snyk": "^1.316.1"
   },
   "repository": {
     "type": "git",
@@ -67,7 +68,9 @@
   "scripts": {
     "start": "node ./seascape/server.js",
     "test": "node ./node_modules/mocha/bin/mocha test.js",
-    "coverage": "mocha test.js -r blanket -R html-cov > coverage.html"
+    "coverage": "mocha test.js -r blanket -R html-cov > coverage.html",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "config": {
     "blanket": {
@@ -94,5 +97,6 @@
   "homepage": "https://github.com/schahriar/Galleon#readme",
   "directories": {
     "test": "tests"
-  }
+  },
+  "snyk": true
 }

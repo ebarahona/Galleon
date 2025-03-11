@@ -51,7 +51,7 @@
     "sails-redis": "^0.10.7",
     "sails-sqlserver": "^0.10.8",
     "serve-favicon": "^2.3.2",
-    "shelljs": "^0.7.5",
+    "shelljs": "^0.9.0",
     "shortid": "^2.2.6",
     "smtp-connection": "^2.12.2",
     "smtp-server": "^1.16.1",
